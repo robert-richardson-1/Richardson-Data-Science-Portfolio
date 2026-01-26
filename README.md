@@ -1,2 +1,4 @@
 # Richardson-Data-Science-Portfolio
 
+## Introduction!##
+This semester at the University of Notre Dame, I am taking an intro to data science course. Through this course, I plan on gaining technical skills in the world of data science and analysis, as well as creating many projects to test and hone these skills. In this repository I will hold my future projects, which will include: EDAs, visualizations, and models.
