@@ -11,7 +11,7 @@ import streamlit as st
 import pandas as pd
 
 #app title
-st.title("Explore Palmer's Penguins Data")
+st.title("Palmer's Penguins Data Exploration")
 
 #app description
 st.write("""This app allows the exploration of the **Palmer's Penguins dataset**. 
