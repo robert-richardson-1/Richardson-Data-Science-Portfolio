@@ -4,4 +4,5 @@
 This semester at the University of Notre Dame, I am taking an intro to data science course. Through this course, I plan on gaining technical skills in the world of data science and analysis, as well as creating many projects to test and hone these skills. In this repository, I will hold my future projects, which will include: EDAs, visualizations, and models.
 
 ## Completed projects
-- So far, I have completed one project, which involved the creation of a basic Streamlit app. By using the interactive features, you can filter the penguin data by species, island, bill length, bill depth, flipper length, body mass, sex, and year to see how different penguins compare!
+- Palmer's Penguins Data Exploration
+     - So far, I have completed one project, which involved the creation of a basic Streamlit app. By using the interactive features, you can filter the penguin data by species, island, bill length, bill depth, flipper length, body mass, sex, and year to see how different penguins compare!
