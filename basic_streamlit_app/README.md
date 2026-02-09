@@ -18,4 +18,5 @@ This Streamlit app explores the "Palmer's Penguins" Dataset. Using the added fil
 - year
 
 ## Additional Info
-At the bottom of the Streamlit app, there is the entire raw data set, to view all data if needed.
+- At the bottom of the Streamlit app, there is the entire raw data set, to view all data if needed.
+- 🐧Palmer's Penguins Data (Excel): https://tinyurl.com/PalmersPenguins
