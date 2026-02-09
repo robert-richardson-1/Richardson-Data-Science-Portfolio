@@ -17,5 +17,5 @@ This Streamlit app explores the "Palmer's Penguins" Dataset. Using the added fil
 - sex
 - year
 
-# Additional Info
+## Additional Info
 At the bottom of the Streamlit app, there is the entire raw data set, to view all data if needed.
