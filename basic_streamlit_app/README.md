@@ -2,8 +2,8 @@
 
 ⚠️ *Disclaimer* ⚠️
 
-This is the first-ever app that I have made using Streamlit and Streamlit commands. Enjoy with a grain of salt!
-Code can be found in this repository location in the main.py file. Instructions on how to run app are in the comments at the beginning of the main.py file
+- This is the first-ever app that I have made using Streamlit and Streamlit commands. Enjoy with a grain of salt!
+- Code can be found in this repository location in the main.py file. Instructions on how to run app are in the comments at the beginning of the main.py file
 
 ## Description
 
