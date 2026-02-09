@@ -1,6 +1,7 @@
 # Basic Streamlit App
 
 *Disclaimer*
+
 This is the first-ever app that I have made using Streamlit and Streamlit commands. Enjoy with a grain of salt!
 
 
