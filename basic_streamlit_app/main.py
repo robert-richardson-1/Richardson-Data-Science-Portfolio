@@ -1,3 +1,10 @@
+#Instructions:
+# 
+# Basic Streamlit app using the Data set "Palmer's Penguins." To use
+# the app you should load the Streamlit program by downloading the proper
+# program and then running the following code in terminal:
+# streamlit run basic_streamlit_app/main.py
+
 #import needed programs
 import streamlit as st
 import pandas as pd
