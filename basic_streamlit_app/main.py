@@ -4,6 +4,7 @@
 # the app you should load the Streamlit program by downloading the proper
 # program and then running the following code in terminal:
 # streamlit run basic_streamlit_app/main.py
+#
 
 #import needed programs
 import streamlit as st
@@ -14,8 +15,9 @@ st.title("Explore Palmer's Penguins Data")
 
 #app description
 st.write("""This app allows the exploration of the **Palmer's Penguins dataset**. 
-Using the interactive features, you can filter the penguin data by species, 
-island, and body mass to see how different penguins compare!""")
+Using the interactive features, you can filter the penguin data by species, island, 
+bill length, bill depth, flipper length, body mass, sex, and year to see how different 
+penguins compare!""")
 
 st.write("""By adjusting both the selectors, sliders, and physical ordering commands
 by clicking on the physical dataset, you can filter the data in
