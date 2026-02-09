@@ -64,13 +64,27 @@ body_mass = st.sidebar.slider(
     (int(df["body_mass_g"].min()), int(df["body_mass_g"].max()))
 )
 
+sex = st.sidebar.multiselect(
+    "Select sex",
+    options=df["sex"].unique(),
+    default=df["sex"].unique()
+)
+
+year = st.sidebar.multiselect(
+    "Select Year",
+    options=df["year"].unique(),
+    default=df["year"].unique()
+)
+
 filtered_df = df[
     (df["species"].isin(species)) &
     (df["island"].isin(island)) &
     (df["bill_length_mm"].between(bill_length[0], bill_length[1])) &
     (df["bill_depth_mm"].between(bill_depth[0], bill_depth[1])) &
     (df["flipper_length_mm"].between(flipper_length[0], flipper_length[1])) &
-    (df["body_mass_g"].between(body_mass[0], body_mass[1]))
+    (df["body_mass_g"].between(body_mass[0], body_mass[1])) &
+    (df["sex"].isin(sex)) &
+    (df["year"].isin(year))
 ]
 
 #display data (with filters if inputed)
