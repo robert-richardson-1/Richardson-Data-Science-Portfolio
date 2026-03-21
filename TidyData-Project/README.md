@@ -18,9 +18,11 @@ Source: [Mutant Moneyball on GitHub](https://github.com/EliCash82/mutantmoneybal
 ## Visualizations
 
 - Chart 1: Top 10 mutants by total card value (horizontal bar chart)
-![Top 10 X-Men by Total Card Value](viz1_value_by_decade_market(1).png)
+![viz1_value_by_decade_market (1)](https://github.com/user-attachments/assets/2514d122-8e89-4868-bf29-affaa9e4369c)
+
 - Chart 2: Total card value by decade and market (grouped bar chart)
-![Total X-Men Card Value by Decade and Market](viz2_top10_mutants(1).png)
+<img width="1321" height="681" alt="Screenshot 2026-03-20 223224" src="https://github.com/user-attachments/assets/097d7a5a-d655-4354-b153-1f890dae448c" />
+
 
 ## References
 
