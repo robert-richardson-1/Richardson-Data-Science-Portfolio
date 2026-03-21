@@ -5,11 +5,11 @@ This semester at the University of Notre Dame, I am taking an intro to data scie
 
 ## Completed projects
 1.) Palmer's Penguins Data Exploration 🐧
-Project involving the creation of a basic Streamlit app. By using the interactive features, you can filter the penguin data by species, island, bill length, bill depth, flipper length, body mass, sex, and year to see how different penguins compare!
+- Project involving the creation of a basic Streamlit app. By using the interactive features, you can filter the penguin data by species, island, bill length, bill depth, flipper length, body mass, sex, and year to see how different penguins compare!
 <img width="291" height="173" alt="image" src="https://github.com/user-attachments/assets/2648f7f0-2e6f-4baf-ab40-b74f83cb6e58" />
  
 2.) [TidyData-Project](./TidyData-Project) 🧩
-Applies tidy data principles to the Mutant Moneyball dataset using Python and pandas. Reshapes wide-format data into a long-format structure, performs a pivot-table aggregation, and produces two exploratory visualizations.
+- Applies tidy data principles to the Mutant Moneyball dataset using Python and pandas. Reshapes wide-format data into a long-format structure, performs a pivot-table aggregation, and produces two exploratory visualizations.
 
 Skills showcased: data cleaning (melt, str.split(), str.replace()), tidy data principles, matplotlib, and Jupyter Notebook
 
