@@ -14,3 +14,5 @@ This semester at the University of Notre Dame, I am taking an intro to data scie
 Skills showcased: data cleaning (melt, str.split(), str.replace()), tidy data principles, matplotlib, and Jupyter Notebook
 
 This project complements my portfolio by demonstrating the ability to work with real-world messy data and apply a principled framework to make it analysis-ready, which is a core need in the data science workplace.
+<img width="1321" height="681" alt="image" src="https://github.com/user-attachments/assets/33d34b0f-cbde-4970-9dda-819e57413575" />
+
