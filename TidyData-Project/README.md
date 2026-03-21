@@ -17,15 +17,24 @@ Source: [Mutant Moneyball on GitHub](https://github.com/EliCash82/mutantmoneybal
 
 ## Visualizations
 
-- Chart 1: Top 10 mutants by total card value (horizontal bar chart) viz2_top10_mutants.png
-  ![Total X-Men Card Value by Decade and Market](viz1_value_by_decade_market.png)
-- Chart 2: Total card value by decade and market (grouped bar chart) viz1_value_by_decade_market.png
-  ![Top 10 X-Men by Total Card Value](viz2_top10_mutants.png)
+- Chart 1: Top 10 mutants by total card value (horizontal bar chart)
+![Total X-Men Card Value by Decade and Market](viz1_value_by_decade_market.png)
+- Chart 2: Total card value by decade and market (grouped bar chart)
+![Top 10 X-Men by Total Card Value](viz2_top10_mutants.png)
 
 ## References
 
 Wickham, H. (2014). Tidy Data. https://www.jstatsoft.org/article/view/v059i10
 Pandas Cheat Sheet: https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
+
+![Top 10 X-Men by Total Card Value](viz2_top10_mutants.png)
+
+---
+
+## References
+
+- Wickham, H. (2014). *Tidy Data*. https://www.jstatsoft.org/article/view/v059i10
+- Pandas Cheat Sheet: https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
 
 
 
