@@ -13,7 +13,7 @@ jupyter notebok tidydata_analysis.ipynb
 
 ## Dataset Overview
 
-Source: [Mutant Moneyball on GitHub](https://github.com/EliCash82/mutantmoneyball). One row per X-Men member, columns named TotalValue{Decade}s_{Market}. Through cleaning: melted data from wide to long form, split column names into Decade and Market, cleaned "$" and "," from monetary strings, dropped rows with no recorded sale.
+Source: [Mutant Moneyball on GitHub](https://github.com/EliCash82/mutantmoneyball). One row per X-Men member, columns named TotalValue{Decade}s_{Market}. Through cleaning: melted data from wide to long form, split column names into Decade and Market, cleaned "$" and "," from monetary strings, and dropped rows with no recorded sale.
 
 ## Visualizations
 
