@@ -26,5 +26,5 @@ Source: [Mutant Moneyball on GitHub](https://github.com/EliCash82/mutantmoneybal
 
 ## References
 
-Wickham, H. (2014). Tidy Data. https://www.jstatsoft.org/article/view/v059i10
-Pandas Cheat Sheet: https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
+- Wickham, H. (2014). Tidy Data. https://www.jstatsoft.org/article/view/v059i10
+- Pandas Cheat Sheet: https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
