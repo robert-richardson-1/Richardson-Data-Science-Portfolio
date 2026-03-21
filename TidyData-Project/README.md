@@ -6,7 +6,7 @@ Tidy data rules: each variable in its own column, each observation its own row, 
 
 ## How to Run
 
-by installing jupyter then load:
+Install jupyter then load:
 jupyter notebok tidydata_analysis.ipynb
 
 Place mutant_moneyball.csv in the same folder (.csv file available in the TidyData-Project folder in GitHub repository), then run all cells.
