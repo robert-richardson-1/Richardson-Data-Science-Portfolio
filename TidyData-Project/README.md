@@ -6,14 +6,14 @@ Tidy data rules: each variable in its own column, each observation its own row, 
 
 ## How to Run
 
-Install jupyter then load:
+- Install jupyter then load:
 jupyter notebok tidydata_analysis.ipynb
 
-Place mutant_moneyball.csv in the same folder (.csv file available in the TidyData-Project folder in GitHub repository), then run all cells.
+- Place mutant_moneyball.csv in the same folder (.csv file available in the TidyData-Project folder in GitHub repository), then run all cells.
 
 ## Dataset Overview
 
-Source: [Mutant Moneyball on GitHub](https://github.com/EliCash82/mutantmoneyball). One row per X-Men member, columns named TotalValue{Decade}s_{Market}. Through cleaning: melted data from wide to long form, split column names into Decade and Market, cleaned "$" and "," from monetary strings, dropped rows with no recorded sale.
+Source: [Mutant Moneyball on GitHub](https://github.com/EliCash82/mutantmoneyball). One row per X-Men member, columns named TotalValue{Decade}s_{Market}. Through cleaning: melted data from wide to long form, split column names into Decade and Market, cleaned "$" and "," from monetary strings, and dropped rows with no recorded sale.
 
 ## Visualizations
 
@@ -26,5 +26,5 @@ Source: [Mutant Moneyball on GitHub](https://github.com/EliCash82/mutantmoneybal
 
 ## References
 
-Wickham, H. (2014). Tidy Data. https://www.jstatsoft.org/article/view/v059i10
-Pandas Cheat Sheet: https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
+- Wickham, H. (2014). Tidy Data. https://www.jstatsoft.org/article/view/v059i10
+- Pandas Cheat Sheet: https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
