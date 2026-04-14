@@ -13,7 +13,10 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="ML Explorer", layout="wide")
 st.title("ML Explorer")
-st.write("Train a machine learning model on your own data or a sample dataset.")
+st.write("Train a machine learning model on your own data or a sample " \
+"dataset. This app allows you to upload a dataset, experiment with " \
+"hyperparameters, namely test size/depth of a decision tree and test sizer/regularization " \
+"of a logistic regression, and observe how these affect model training and performance.")
 st.divider()
 
 #sidebar controls
@@ -74,6 +77,7 @@ le = LabelEncoder()
 y = le.fit_transform(df[target_col])
 n_classes = len(le.classes_)
 
+#kind of guessing on a bit of this next part. I think that this is correct
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=test_size, random_state=42, stratify=y
 )
@@ -95,12 +99,12 @@ m2.metric("Precision", f"{precision_score(y_test, y_pred, average=avg, zero_divi
 m3.metric("Recall",    f"{recall_score(y_test, y_pred, average=avg, zero_division=0):.2%}")
 m4.metric("F1 Score",  f"{f1_score(y_test, y_pred, average=avg, zero_division=0):.2%}")
 
-#confusion matrix and ROC curve
+#confusion matrix and ROC/AUC curves
 st.divider()
 left, right = st.columns(2)
 
 with left:
-    st.subheader("🔲 Confusion Matrix")
+    st.subheader("Confusion Matrix")
     fig, ax = plt.subplots()
     ConfusionMatrixDisplay(
         confusion_matrix(y_test, y_pred), display_labels=le.classes_
@@ -109,15 +113,13 @@ with left:
     st.pyplot(fig)
 
 with right:
-    st.subheader("📈 ROC Curve")
+    st.subheader("ROC Curve")
     fig, ax = plt.subplots()
 
     if n_classes == 2:
-        # Binary: one curve
         fpr, tpr, _ = roc_curve(y_test, y_prob[:, 1])
         ax.plot(fpr, tpr, lw=2, label=f"AUC = {auc(fpr, tpr):.2f}")
     else:
-        # Multiclass: one curve per class
         y_bin = label_binarize(y_test, classes=list(range(n_classes)))
         for i, cls in enumerate(le.classes_):
             fpr, tpr, _ = roc_curve(y_bin[:, i], y_prob[:, i])
