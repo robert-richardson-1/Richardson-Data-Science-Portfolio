@@ -19,6 +19,10 @@ Key ML concepts applied: supervised classification, train/test splitting, hyperp
 - matplotlib
 - seaborn
 
+## Dataset Overview
+
+**Source:** Iris and Breast Cancer datasets are built into scikit-learn (`sklearn.datasets`). Iris classifies flower species by petal and sepal measurements across 3 classes (150 rows, 4 features). Breast Cancer classifies tumors as malignant or benign (569 rows, 30 features). Users may also supply their own labeled CSV for classification tasks.
+
 ## App Features
 
 - **Dataset selection:** Choose from Iris (sample), Breast Cancer (sample), or upload your own CSV file
@@ -29,9 +33,9 @@ Key ML concepts applied: supervised classification, train/test splitting, hyperp
 - **Dataset preview:** Displays row count, feature count, class count, and a live data table
 - **Performance metrics:** Model accuracy score and confusion matrix heatmap update after each training run
 
-## Dataset Overview
+- Example of App creation of confusion matrix and ROC curve based on sample Breast Cancer data
+<img width="1611" height="814" alt="Screenshot 2026-04-14 152549" src="https://github.com/user-attachments/assets/f4dd3ba8-7eb0-49e9-8170-2549e72521d7" />
 
-**Source:** Iris and Breast Cancer datasets are built into scikit-learn (`sklearn.datasets`). Iris classifies flower species by petal and sepal measurements across 3 classes (150 rows, 4 features). Breast Cancer classifies tumors as malignant or benign (569 rows, 30 features). Users may also supply their own labeled CSV for classification tasks.
 
 ## References
 
