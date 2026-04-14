@@ -35,7 +35,8 @@ Key ML concepts applied: supervised classification, train/test splitting, hyperp
 
 ## Example of App in Action
 **Confusion matrix and ROC curve based on sample Breast Cancer data:**
- - 
+ - Here, a user decided to use a decision tree model, and set their hyper parameters to a "test size" of 0.2 and a "max depth" of 4. Using these parameters, the model returned it's performance metrics for the data. It outputted the model's accuracy, precision, recall, and F1 score, as well as gave a confusion matrix and ROC curve from the given inputs/sample .csv file used.
+
 
 <img width="1611" height="814" alt="Screenshot 2026-04-14 152549" src="https://github.com/user-attachments/assets/f4dd3ba8-7eb0-49e9-8170-2549e72521d7" />
 
