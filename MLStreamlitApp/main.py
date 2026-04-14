@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="ML Explorer", layout="wide")
 st.title("ML Explorer")
 st.write("Train a machine learning model on your own data or a sample " \
-"dataset. This app allows you to upload a dataset, experiment with " \
+"dataset! This app allows you to upload a dataset, experiment with " \
 "hyperparameters, namely test size/depth of a decision tree and test sizer/regularization " \
 "of a logistic regression, and observe how these affect model training and performance.")
 st.divider()
@@ -45,13 +45,13 @@ with st.sidebar:
 
     st.subheader("2. Model")
     model_name = st.selectbox("", ["Decision Tree", "Logistic Regression"])
-    test_size = st.slider("Test set size", 0.1, 0.5, 0.2, step=0.05)
+    test_size = st.slider("Test Set Size", 0.1, 0.5, 0.2, step=0.05)
 
     if model_name == "Decision Tree":
-        max_depth = st.slider("Max depth", 1, 20, 4)
+        max_depth = st.slider("Max Depth", 1, 20, 4)
         model = DecisionTreeClassifier(max_depth=max_depth, random_state=42)
     else:
-        C = st.slider("Regularization (C) — lower = simpler", 0.01, 10.0, 1.0)
+        C = st.slider("Regularization (Lower = Simpler)", 0.01, 10.0, 1.0)
         model = LogisticRegression(C=C, max_iter=1000, random_state=42)
 
     train_btn = st.button("Train Model", use_container_width=True)
