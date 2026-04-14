@@ -34,7 +34,7 @@ Key ML concepts applied: supervised classification, train/test splitting, hyperp
 - **Performance metrics:** Model accuracy score and confusion matrix heatmap update after each training run
 
 ## Example of App
-Confusion matrix and ROC curve based on sample Breast Cancer data:
+**Confusion matrix and ROC curve based on sample Breast Cancer data:**
 
 
 <img width="1611" height="814" alt="Screenshot 2026-04-14 152549" src="https://github.com/user-attachments/assets/f4dd3ba8-7eb0-49e9-8170-2549e72521d7" />
