@@ -13,7 +13,7 @@ This semester at the University of Notre Dame, I am taking an intro to data scie
 
 <img width="291" height="173" alt="image" src="https://github.com/user-attachments/assets/2648f7f0-2e6f-4baf-ab40-b74f83cb6e58" />
  
-2.) [TidyData-Project](./TidyData-Project) 🧩
+2.) [Tidy Data Project](./TidyData-Project) 🧩
 - Applies tidy data principles to the Mutant Moneyball dataset using Python and pandas. Reshapes wide-format data into a long-format structure, performs a pivot-table aggregation, and produces two exploratory visualizations.
 
 - Skills showcased: data cleaning (melt, str.split(), str.replace()), tidy data principles, matplotlib, and Jupyter Notebook.
@@ -21,7 +21,7 @@ This semester at the University of Notre Dame, I am taking an intro to data scie
 - This project complements my portfolio by demonstrating the ability to work with real-world messy data and apply a principled framework to make it analysis-ready, which is a core need in the data science workplace.
 <img width="1321" height="681" alt="image" src="https://github.com/user-attachments/assets/33d34b0f-cbde-4970-9dda-819e57413575" />
 
-3.) [MLStreamlitApp](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/tree/main/MLStreamlitApp) 🤖
+3.) [Machine-Learning Streamlit App](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/tree/main/MLStreamlitApp) 🤖
 
 - [Click to open project via Streamlit Community Cloud](https://richardson-data-science-portfolio-mlapp.streamlit.app/)
 
