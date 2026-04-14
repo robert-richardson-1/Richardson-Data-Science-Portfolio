@@ -7,7 +7,7 @@ Key ML concepts applied: supervised classification, train/test splitting, hyperp
 ## How to Run
 
 - **Install dependencies:** pip install streamlit, scikit-learn, pandas, numpy, matplotlib, seaborn
-- **Run locally:** process in terminal: streamlit run main.py
+- **Run locally:** process in terminal: "streamlit run main.py"
 - **Deployed App:** [View on Streamlit Community Cloud](https://richardson-data-science-portfolio-mlapp.streamlit.app/)
 
 ## Libraries Included
