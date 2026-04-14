@@ -27,3 +27,5 @@ This semester at the University of Notre Dame, I am taking an intro to data scie
 - Skills showcased: supervised classification models (Decision Tree, Logistic Regression), hyperparameter tuning, confusion matrix visualization (seaborn), train/test splitting (scikit-learn), and interactive web app deployment (Streamlit)
 
 - This project complements my portfolio by demonstrating the ability to move from raw ML concepts to a fully deployed, user-facing application. This bridges the gap between model training and interactive presentation, which is a core skill in practical data science and ML engineering.
+<img width="1611" height="814" alt="Screenshot 2026-04-14 152549" src="https://github.com/user-attachments/assets/0d21321c-fd6d-4470-9348-ced79bd57944" />
+
