@@ -25,7 +25,7 @@ with st.sidebar:
     st.header("Exploration Settings")
 
     st.subheader("1. Dataset")
-    source = st.radio("", ["Iris (sample)", "Breast Cancer (sample)", "Upload own CSV"])
+    source = st.radio("", ["Iris (sample)", "Breast Cancer (sample)", "Upload own .csv file"])
 
     if source == "Iris (sample)":
         raw = load_iris(as_frame=True)
