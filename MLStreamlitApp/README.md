@@ -24,8 +24,8 @@ Key ML concepts applied: supervised classification, train/test splitting, hyperp
 - **Dataset selection:** Choose from Iris (sample), Breast Cancer (sample), or upload your own CSV file
 - **Model selection:** Switch between Decision Tree and Logistic Regression classifiers
 - **Hyperparameter tuning:**
-  - *Decision Tree:* adjust test set size and max depth via sidebar sliders
-  - *Logistic Regression:* adjust test set size and regularization strength (C)
+  - Decision Tree: adjust test set size and max depth via sidebar sliders
+  - Logistic Regression: adjust test set size and regularization strength (C)
 - **Dataset preview:** Displays row count, feature count, class count, and a live data table
 - **Performance metrics:** Model accuracy score and confusion matrix heatmap update after each training run
 
