@@ -33,7 +33,7 @@ Key ML concepts applied: supervised classification, train/test splitting, hyperp
 - **Dataset preview:** Displays row count, feature count, class count, and a live data table
 - **Performance metrics:** Model accuracy score and confusion matrix heatmap update after each training run
 
-## Example of App creation
+## Example of App
 Confusion matrix and ROC curve based on sample Breast Cancer data:
 
 
