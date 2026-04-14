@@ -14,9 +14,10 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Supervised Machine Learning Playground!")
 st.title("Supervised Machine Learning Playground!")
 st.write("Train a machine learning model on your own data or a sample " \
-"dataset! This app allows you to upload a dataset, experiment with " \
-"hyperparameters, namely test size/depth of a decision tree and test sizer/regularization " \
-"of a logistic regression, and observe how these affect model training and performance.")
+"dataset!") 
+st.write("This app allows you to upload a dataset, experiment with " \
+"hyperparameters (namely test size/depth of a decision tree and test size/regularization " \
+"of a logistic regression), and observe how these affect model training and performance!")
 st.divider()
 
 #sidebar controls
