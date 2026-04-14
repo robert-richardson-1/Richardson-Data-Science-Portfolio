@@ -66,7 +66,7 @@ col3.metric("Classes", df[target_col].nunique())
 st.dataframe(df.head(), use_container_width=True)
 
 if not train_btn:
-    st.info("👈 Configure your settings in the sidebar, then click 'Train Model'")
+    st.info("Configure your settings in the sidebar, then click 'Train Model'")
     st.stop()
 
 #train
@@ -78,7 +78,7 @@ le = LabelEncoder()
 y = le.fit_transform(df[target_col])
 n_classes = len(le.classes_)
 
-#kind of guessing on a bit of this next part. I think that this is correct
+#kind of guessing on a bit of this next part. I think that this method is correct
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=test_size, random_state=42, stratify=y
 )
@@ -121,7 +121,7 @@ with right:
         fpr, tpr, _ = roc_curve(y_test, y_prob[:, 1])
         ax.plot(fpr, tpr, lw=2, label=f"AUC = {auc(fpr, tpr):.2f}")
     else:
-        y_bin = label_binarize(y_test, classes=list(range(n_classes)))
+        y_bin= label_binarize(y_test, classes=list(range(n_classes)))
         for i, cls in enumerate(le.classes_):
             fpr, tpr, _ = roc_curve(y_bin[:, i], y_prob[:, i])
             ax.plot(fpr, tpr, lw=2, label=f"{cls} (AUC={auc(fpr, tpr):.2f})")
