@@ -24,7 +24,7 @@ This semester at the University of Notre Dame, I am taking an intro to data scie
 3.) [MLStreamlitApp](https://richardson-data-science-portfolio-mlapp.streamlit.app/) 🤖
 - Project involving the creation of an interactive supervised machine learning web app built with Streamlit. Users can select the Iris or Breast Cancer sample datasets (or upload their own .csv file), choose between a Decision Tree and a Logistic Regression classifier, and tune hyperparameters such as test size, max depth, and regularization strength to observe their impact on model performance in real time.
 
-- Skills showcased: supervised classification models (Decision Tree, Logistic Regression), hyperparameter tuning, confusion matrix visualization (seaborn), train/test splitting (scikit-learn), and interactive web app deployment (Streamlit).
+- Skills showcased: supervised classification models (Decision Tree, Logistic Regression), hyperparameter tuning, confusion matrix and ROC curve visualization (seaborn), train/test splitting (scikit-learn), and interactive web app deployment (Streamlit).
 
 - This project complements my portfolio by demonstrating the ability to move from raw ML concepts to a fully deployed, user-facing application. This bridges the gap between model training and interactive presentation, which is a core skill in practical data science and ML engineering.
 <img width="1611" height="814" alt="Screenshot 2026-04-14 152549" src="https://github.com/user-attachments/assets/0d21321c-fd6d-4470-9348-ced79bd57944" />
