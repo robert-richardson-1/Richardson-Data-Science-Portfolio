@@ -11,8 +11,8 @@ from sklearn.metrics import (
 )
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="ML Explorer", layout="wide")
-st.title("ML Explorer")
+st.set_page_config(page_title="Supervised Machine Learning Playground!")
+st.title("Supervised Machine Learning Playground!")
 st.write("Train a machine learning model on your own data or a sample " \
 "dataset! This app allows you to upload a dataset, experiment with " \
 "hyperparameters, namely test size/depth of a decision tree and test sizer/regularization " \
@@ -99,7 +99,7 @@ m2.metric("Precision", f"{precision_score(y_test, y_pred, average=avg, zero_divi
 m3.metric("Recall",    f"{recall_score(y_test, y_pred, average=avg, zero_division=0):.2%}")
 m4.metric("F1 Score",  f"{f1_score(y_test, y_pred, average=avg, zero_division=0):.2%}")
 
-#confusion matrix and ROC/AUC curves
+#confusion matrix and ROC/AUC curves (set next to each other)
 st.divider()
 left, right = st.columns(2)
 
