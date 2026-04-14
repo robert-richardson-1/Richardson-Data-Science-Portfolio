@@ -1,6 +1,6 @@
 # TidyData-Project
 
-This project applies tidy data principles to the dataset: "Mutant Moneyball" — X-Men comic card resale values across four decades (1960s–1990s) and four markets (Heritage, eBay, Wizard, and oStreet). The raw wide-format data is reshaped into a tidy long-format dataset, then explored with a pivot table and visualizations.
+This project applies tidy data principles to the dataset: "Mutant Moneyball" - X-Men comic card resale values across four decades (1960s–1990s) and four markets (Heritage, eBay, Wizard, and oStreet). The raw wide-format data is reshaped into a tidy long-format dataset, then explored with a pivot table and visualizations.
 
 Tidy data rules: each variable in its own column, each observation its own row, each observational unit its own table.
 
