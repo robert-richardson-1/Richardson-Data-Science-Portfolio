@@ -21,9 +21,9 @@ This semester at the University of Notre Dame, I am taking an intro to data scie
 - This project complements my portfolio by demonstrating the ability to work with real-world messy data and apply a principled framework to make it analysis-ready, which is a core need in the data science workplace.
 <img width="1321" height="681" alt="image" src="https://github.com/user-attachments/assets/33d34b0f-cbde-4970-9dda-819e57413575" />
 
-3.) [MLStreamlitApp]((https://richardson-data-science-portfolio-mlapp.streamlit.app/)] 🤖
-- Project involving the creation of an interactive supervised machine learning web app built with Streamlit. Users can select the sample Iris or Breast Cancer dataset (or upload their own .csv file), choose between a Decision Tree and Logistic Regression classifier, and tune hyperparameters like test size, max depth, and regularization strength to observe how these hyperparameters affect model performance in real time.
+3.) [MLStreamlitApp]((https://richardson-data-science-portfolio-mlapp.streamlit.app/) 🤖
+- Project involving the creation of an interactive supervised machine learning web app built with Streamlit. Users can select the Iris or Breast Cancer sample datasets (or upload their own .csv file), choose between a Decision Tree and a Logistic Regression classifier, and tune hyperparameters such as test size, max depth, and regularization strength to observe their impact on model performance in real time.
 
 - Skills showcased: supervised classification models (Decision Tree, Logistic Regression), hyperparameter tuning, confusion matrix visualization (seaborn), train/test splitting (scikit-learn), and interactive web app deployment (Streamlit)
 
-- This project complements my portfolio by demonstrating the ability to move from raw ML concepts to a fully deployed, user-facing application — bridging the gap between model training and interactive presentation, which is a core skill in practical data science and ML engineering.
+- This project complements my portfolio by demonstrating the ability to move from raw ML concepts to a fully deployed, user-facing application. This bridges the gap between model training and interactive presentation, which is a core skill in practical data science and ML engineering.
