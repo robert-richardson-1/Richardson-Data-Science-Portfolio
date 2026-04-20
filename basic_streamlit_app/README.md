@@ -1,42 +1,14 @@
 # Basic Streamlit App
 
-⚠️ *Disclaimer* ⚠️
-
-- This is the first-ever app that I have made using Streamlit and Streamlit commands. Enjoy with a grain of salt!
-   - I have since gained more Data Science/GitHub experience with my recent projects, so I will update certain portions of this project
-- Code can be found in this repository location in the main.py file. Instructions on how to run app are in the comments at the beginning of the main.py file
-
-## Description
-
-This Streamlit app explores the "Palmer's Penguins" Dataset. Using the added filters, one can search and organize the penguins' data by the following variables:
-- species
-- island
-- bill length (mm)
-- bill depth (mm)
-- flipper length (mm)
-- body mass (g)
-- sex
-- year
-
-## Additional Info
-- At the bottom of the Streamlit app, there is the entire raw data set, to view all data if needed.
-- 🐧Palmer's Penguins Data (Excel): https://tinyurl.com/PalmersPenguins
-
-
-
-
-
-# Basic Streamlit App
-
 This project builds an interactive Streamlit application to explore the Palmer's Penguins dataset. Users can filter and search penguin observations by a range of biological and categorical variables, with the full raw dataset available at the bottom of the app for reference.
 
-> **Disclaimer:** This is the first Streamlit app I built. I have since gained more Data Science and GitHub experience, so I will continue updating this project. Code can be found in `main.py` — instructions for running the app are in the comments at the top of that file.
+**Disclaimer:** This is the first Streamlit app I built. I have since gained more Data Science and GitHub experience, so I will continue updating this project. Code can be found in `main.py` — instructions for running the app are in the comments at the top of that file.
 
 ## How to Run
 
-1. Install Streamlit: `pip install streamlit`
+1. Install Streamlit: pip install streamlit
 2. Clone the repository and navigate to the project folder
-3. Run the app: `streamlit run main.py`
+3. Run the app: streamlit run main.py
 
 ## Dataset Overview
 
@@ -55,8 +27,8 @@ The dataset contains observations of penguins across three species collected fro
 
 ## App Features
 
-<!-- Insert a screenshot of your running app here -->
-> 📸 **[<img width="1755" height="985" alt="image" src="https://github.com/user-attachments/assets/4e679d0f-f366-4c05-ad88-e05f8a318af0" />**
+ 
+ 📸 **[<img width="1755" height="985" alt="image" src="https://github.com/user-attachments/assets/4e679d0f-f366-4c05-ad88-e05f8a318af0" />**
 
 The app allows users to:
 
