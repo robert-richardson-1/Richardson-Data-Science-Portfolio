@@ -42,5 +42,5 @@ The app allows users to:
 
 ## References
 
-- Horst, A., Hill, A., & Gorman, K. (2020). *palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data.* [https://tinyurl.com/PalmersPenguins](https://tinyurl.com/PalmersPenguins)
+- Horst, A., Hill, A., & Gorman, K. (2020). palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data. [https://tinyurl.com/PalmersPenguins](https://tinyurl.com/PalmersPenguins)
 - Streamlit Documentation: [https://docs.streamlit.io](https://docs.streamlit.io)
