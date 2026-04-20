@@ -32,6 +32,7 @@ The dataset contains observations of penguins across three species collected fro
  
  <img width="1755" height="985" alt="image" src="https://github.com/user-attachments/assets/4e679d0f-f366-4c05-ad88-e05f8a318af0" />
 
+
 The app allows users to:
 
 - Filter penguin data interactively by any of the variables listed above
