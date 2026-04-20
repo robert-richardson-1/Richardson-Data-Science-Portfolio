@@ -2,7 +2,7 @@
 
 This project builds an interactive Streamlit application to explore the Palmer's Penguins dataset. Users can filter and search penguin observations by a range of biological and categorical variables, with the full raw dataset available at the bottom of the app for reference.
 
-**Disclaimer:** This is the first Streamlit app I built. I have since gained more Data Science and GitHub experience, so I will continue updating this project. Code can be found in main.py — instructions for running the app are in the comments at the top of that file.
+**Disclaimer:** This is the first Streamlit app I built. I have since gained more Data Science and GitHub experience, so I will continue updating this project. Code can be found in main.py with instructions for running the app are in the comments at the top of that file.
 
 ## How to Run
 
