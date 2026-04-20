@@ -12,7 +12,7 @@ This project builds an interactive Streamlit application to explore the Palmer's
 
 ## Dataset Overview
 
-**Source:** [Palmer's Penguins (Excel)](https://allisonhorst.github.io/palmerpenguins/)
+**Source:** [Palmer's Penguins (Excel)](penguins.csv)
 
 The dataset contains observations of penguins across three species collected from islands in the Palmer Archipelago, Antarctica. Each row represents one penguin observation with the following variables:
 
