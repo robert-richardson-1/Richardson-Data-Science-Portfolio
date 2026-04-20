@@ -1,7 +1,11 @@
 # Richardson-Data-Science-Portfolio
 
 ## Introduction!
-This semester at the University of Notre Dame, I am taking an intro to data science course. Through this course, I plan on gaining technical skills in the world of data science and analysis, as well as creating many projects to test and hone these skills. In this repository, I will hold my future projects, which will include: EDAs, visualizations, and models.
+- This semester at the University of Notre Dame, I am taking an intro to data science course. Through this course, I plan on gaining technical skills in the world of data science and analysis, as well as creating many projects to test and hone these skills. In this repository, I will hold my future projects, which will include: EDAs, visualizations, and models.
+- As of 4/19/27 I have created projects showcasing the following skills:
+   - Palmer's Penguins Data Exploration: Streamlit, pandas, and python
+   - Tidy Data Project: data cleaning, tidy data principles, and Jupyter notebook
+   - Machine-Learning Streamlit App: supervised classification models, hyperparameter tuning, confusion matrix and ROC curve visualizations, and train/test splitting
 
 ## Completed projects
 1.) [Palmer's Penguins Data Exploration](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/tree/main/basic_streamlit_app) 🐧
