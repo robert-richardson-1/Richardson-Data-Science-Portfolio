@@ -43,4 +43,4 @@ The app allows users to:
 ## References
 
 - Horst, A., Hill, A., & Gorman, K. (2020). palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data. [Palmer's Penguins Research](https://allisonhorst.github.io/palmerpenguins/)
-- Streamlit Documentation: [https://docs.streamlit.io](https://docs.streamlit.io)
+- Streamlit Documentation: [https://docs.streamlit.io](Sreamlit Docs)
