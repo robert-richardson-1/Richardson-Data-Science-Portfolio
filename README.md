@@ -16,6 +16,8 @@
 - This project demonstrates the ability to build a user-facing data application with interactive controls.
 
 <img width="291" height="173" alt="image" src="https://github.com/user-attachments/assets/2648f7f0-2e6f-4baf-ab40-b74f83cb6e58" />
+<img width="1755" height="985" alt="Screenshot 2026-04-19 232002" src="https://github.com/user-attachments/assets/8d1b3902-fc04-4545-a66c-6c75bab35b96" />
+
  
 2.) [Tidy Data Project](./TidyData-Project) 🧩
 - Applies tidy data principles to the Mutant Moneyball dataset using Python and pandas. Reshapes wide-format data into a long-format structure, performs a pivot-table aggregation, and produces two exploratory visualizations.
