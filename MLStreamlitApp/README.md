@@ -1,8 +1,8 @@
 # Machine-Learning Streamlit App
 
-This project is an interactive supervised machine learning web application built with Streamlit. Users can explore two sample datasets: Iris and Breast Cancer, or upload their own .csv file, then train either a Decision Tree or Logistic Regression classifier with adjustable hyperparameters. The app displays a dataset preview and model performance metrics in real time.
+- This project is an interactive supervised machine learning web application built with Streamlit. Users can explore two sample datasets: Iris and Breast Cancer, or upload their own .csv file, then train either a Decision Tree or Logistic Regression classifier with adjustable hyperparameters. The app displays a dataset preview and model performance metrics in real time.
 
-Key ML concepts applied: supervised classification, train/test splitting, hyperparameter tuning via interactive widgets, and performance evaluation.
+- Key ML concepts applied: supervised classification, train/test splitting, hyperparameter tuning via interactive widgets, and performance evaluation.
 
 ## How to Run
 
@@ -21,7 +21,7 @@ Key ML concepts applied: supervised classification, train/test splitting, hyperp
 
 ## Dataset Overview
 
-**Source:** Iris and Breast Cancer datasets are built into scikit-learn (sklearn.datasets). Iris classifies flower species by petal and sepal measurements across 3 classes (150 rows, 4 features). Breast Cancer classifies tumors as malignant or benign (569 rows, 30 features). Users may also supply their own labeled .csv file for classification tasks.
+**Source:** Iris and Breast Cancer datasets are built into scikit-learn (sklearn.datasets). Iris classifies flower species by petal and sepal measurements across 3 classes (150 rows, 4 features). Breast Cancer classifies tumors as malignant or benign (569 rows, 30 features). Users may also uplaod their own labeled .csv file for classification tasks.
 
 ## App Features
 
