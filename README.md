@@ -6,6 +6,7 @@
    - Palmer's Penguins Data Exploration: Streamlit, pandas, and python
    - Tidy Data Project: data cleaning, tidy data principles, and Jupyter notebook
    - Machine-Learning Streamlit App: supervised classification models, hyperparameter tuning, confusion matrix and ROC curve visualizations, and train/test splitting
+- This is only a handful of the visualizations that I have had input on this semester. Every Visualization from every project that I have completed can be found in the "view_visualizations" Jupyter Notebook file located in the "Projects" folder.
 
 ## Completed projects
 1.) [Palmer's Penguins Data Exploration](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/tree/main/basic_streamlit_app) 🐧
