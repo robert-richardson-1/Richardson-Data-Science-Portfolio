@@ -3,9 +3,9 @@
 ## Introduction!
 - This semester at the University of Notre Dame, I am taking an intro to data science course. Through this course, I plan on gaining technical skills in the world of data science and analysis, as well as creating many projects to test and hone these skills. In this repository, I will hold my future projects, which will include: EDAs, visualizations, and models.
 - As of 4/19/27 I have created projects showcasing the following skills:
-   - Palmer's Penguins Data Exploration: Streamlit, pandas, and python
-   - Tidy Data Project: data cleaning, tidy data principles, and Jupyter notebook
-   - Machine-Learning Streamlit App: supervised classification models, hyperparameter tuning, confusion matrix and ROC curve visualizations, and train/test splitting
+   - Palmer's Penguins Data Exploration: `Streamlit, Pandas, and Python`
+   - Tidy Data Project: `data cleaning, tidy data principles, and Jupyter notebook`
+   - Machine-Learning Streamlit App: `supervised classification models, hyperparameter tuning, confusion matrix and ROC curve visualizations, and train/test splitting`
 - This is only a handful of the visualizations that I have had input on this semester. Every Visualization from every project that I have completed can be found in the "view_visualizations" Jupyter Notebook file located in the "Projects" folder.
 
 ## Completed projects
