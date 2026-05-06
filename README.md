@@ -10,7 +10,7 @@
 
 ## Completed projects
 1.) [Palmer's Penguins Data Exploration](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/tree/main/basic_streamlit_app) 🐧
-- Project involving the creation of a basic Streamlit app. By using the interactive features, one can filter the penguin data by species, island, bill length, bill depth, flipper length, body mass, sex, and year to see how different penguins compare!
+- Project involving the creation of a basic `Streamlit` app. By using the interactive features, one can filter the penguin data by species, island, bill length, bill depth, flipper length, body mass, sex, and year to see how different penguins compare!
 
 - Skills showcased: **interactive web app development (`Streamlit`), data filtering and display (`Pandas`), and `Python`.**
 
@@ -21,7 +21,7 @@
 
  
 2.) [Tidy Data Project](./TidyData-Project) 🧩
-- Applies tidy data principles to the Mutant Moneyball dataset using Python and pandas. Reshapes wide-format data into a long-format structure, performs a pivot-table aggregation, and produces two exploratory visualizations.
+- Applies tidy data principles to the Mutant Moneyball dataset using `Python` and `Pandas`. Reshapes wide-format data into a long-format structure, performs a pivot-table aggregation, and produces two exploratory visualizations.
 
 - Skills showcased: **data cleaning (`melt`, `str.split()`, `str.replace()`), tidy data principles, `Matplotlib`, and `Jupyter Notebook`.**
 
@@ -32,7 +32,7 @@
 
 - [Click to open project via Streamlit Community Cloud](https://richardson-data-science-portfolio-mlapp.streamlit.app/)
 
-- Project involving the creation of an interactive supervised machine learning web app built with Streamlit. Users can select the Iris or Breast Cancer sample datasets (or upload their own .csv file), choose between a Decision Tree and a Logistic Regression classifier, and tune hyperparameters such as test size, max depth, and regularization strength to observe their impact on model performance in real time.
+- Project involving the creation of an interactive supervised machine learning web app built with `Streamlit`. Users can select the Iris or Breast Cancer sample datasets (or upload their own .csv file), choose between a Decision Tree and a Logistic Regression classifier, and tune hyperparameters such as test size, max depth, and regularization strength to observe their impact on model performance in real time.
 
 - Skills showcased: **supervised classification models (Decision Tree, Logistic Regression), hyperparameter tuning, confusion matrix and ROC curve visualization (`Seaborn`), train/test splitting (`Scikit-learn`), and interactive web app deployment (`Streamlit`).**
 
