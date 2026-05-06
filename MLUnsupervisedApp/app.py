@@ -62,7 +62,6 @@ col2.metric("Features", df.shape[1])
 st.dataframe(df.head(), use_container_width=True)
 st.divider()
 
-#preprocessing
 X = StandardScaler().fit_transform(df)
 
 #k-means
