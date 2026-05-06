@@ -79,7 +79,7 @@ if algo == "K-Means Clustering":
     m1.metric("Inertia (WCSS)", f"{km.inertia_:,.1f}")
     m1.write("Inertia (also called WCSS — within-cluster sum of squares) measures the total distance "
              "between each point and its cluster's centroid. Lower inertia means tighter, more compact clusters. "
-             "It will always decrease as k increases, which is why you need the elbow plot to find a balanced k.")
+             "It will always decrease as k increases, which is why you will need the elbow plot to find a balanced k.")
     m2.metric("Silhouette Score", f"{sil:.3f}")
     m2.write("The silhouette score ranges from -1 to 1. A score close to 1 means points are well-matched "
              "to their own cluster and far from neighboring clusters. A score near 0 means clusters are overlapping, "
