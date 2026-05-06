@@ -10,7 +10,7 @@ Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionali
 
 - **Install dependencies:** `pip install streamlit scikit-learn pandas numpy matplotlib seaborn`
 - **Run locally:** in terminal: `streamlit run app.py`
-- **Deployed App:** [View on Streamlit Community Cloud]
+- **Deployed App:** [View on Streamlit Community Cloud](https://richardson-data-science-portfolio-mlunsupervisedapp.streamlit.app/)
 
 ---
 
