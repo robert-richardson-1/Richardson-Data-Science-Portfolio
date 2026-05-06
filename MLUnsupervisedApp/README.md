@@ -10,7 +10,7 @@ Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionali
 
 - **Install dependencies:** `pip install streamlit scikit-learn pandas numpy matplotlib seaborn`
 - **Run locally:** in terminal: `streamlit run app.py`
-- **Deployed App:** [View on Streamlit Community Cloud](#) *(update link after deployment)*
+- **Deployed App:** [View on Streamlit Community Cloud]
 
 ---
 
@@ -45,7 +45,6 @@ Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionali
 
 ## Example of App in Action
 
-*(Add a screenshot of your deployed app here)*
 
 ---
 
