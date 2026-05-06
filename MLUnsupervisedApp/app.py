@@ -7,10 +7,10 @@ from sklearn.datasets import load_iris, load_wine, load_breast_cancer
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
-from sklearn.metrics import silhouette_score, silhouette_samples
+from sklearn.metrics import silhouette_score
 
 st.set_page_config(page_title="Unsupervised Machine Learning Playground!")
-st.title("Unsupervised Machine Learning Playground!")
+st.title("Unsupervised Machine Learning App!")
 st.write("Explore your data using unsupervised machine learning techniques!")
 st.write("This app allows you to upload a dataset (or use a sample), experiment with "
          "hyperparameters, and observe how they affect model behavior and visualizations!")
