@@ -1,4 +1,4 @@
-# Unsupervised Machine Learning Playground
+# Unsupervised Machine Learning Streamlit App
 
 This project is an interactive unsupervised machine learning web application built with `Streamlit`. Users can explore two sample datasets (Iris and Breast Cancer), or upload their own .csv file, then run either K-Means Clustering or Principal Component Analysis with adjustable hyperparameters. The app displays a dataset preview, model performance metrics, and visualizations that update in real time.
 
@@ -10,7 +10,7 @@ Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionali
 
 - **Install dependencies:** `pip install streamlit scikit-learn pandas numpy matplotlib seaborn`
 - **Run locally:** in terminal: `streamlit run app.py`
-- **Deployed App:** [View on Streamlit Community Cloud]
+- **Deployed App:** [View on Streamlit Community Cloud](https://richardson-data-science-portfolio-mlunsupervisedapp.streamlit.app/)
 
 ---
 
