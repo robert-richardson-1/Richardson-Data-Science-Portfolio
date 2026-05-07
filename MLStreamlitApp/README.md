@@ -2,7 +2,7 @@
 
 This project is an interactive supervised machine learning web application built with Streamlit. Users can explore two sample datasets: Iris and Breast Cancer, or upload their own .csv file, then train either a Decision Tree or Logistic Regression classifier with adjustable hyperparameters. The app displays a dataset preview and model performance metrics in real time.
 
-Key ML concepts applied: supervised classification, train/test splitting, hyperparameter tuning via interactive widgets, and performance evaluation.
+Key machine-learning concepts applied: supervised classification, train/test splitting, hyperparameter tuning via interactive widgets, and performance evaluation.
 
 ## How to Run
 
