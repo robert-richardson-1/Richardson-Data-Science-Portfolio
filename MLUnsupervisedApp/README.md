@@ -4,7 +4,6 @@ This project is an interactive unsupervised machine learning web application bui
 
 Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionality reduction, hyperparameter tuning via interactive widgets, and performance evaluation.
 
----
 
 ## How to Run
 
@@ -12,7 +11,6 @@ Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionali
 - **Run locally:** in terminal: `streamlit run app.py`
 - **Deployed App:** [View on Streamlit Community Cloud](https://richardson-data-science-portfolio-mlunsupervisedapp.streamlit.app/)
 
----
 
 ## Libraries Included
 
@@ -23,13 +21,11 @@ Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionali
 - `matplotlib`
 - `seaborn`
 
----
 
 ## Dataset Overview
 
 **Source:** Iris and Breast Cancer datasets are built into scikit-learn (`sklearn.datasets`). Iris classifies flower species by petal and sepal measurements across 3 classes (150 rows, 4 features). Breast Cancer classifies tumors as malignant or benign (569 rows, 30 features). Users may also upload their own labeled, tabular .csv file for clustering and dimensionality reduction tasks.
 
----
 
 ## App Features
 
@@ -41,7 +37,6 @@ Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionali
 - **Dataset preview:** Displays row count, feature count, and a live data table
 - **Performance metrics:** Inertia, silhouette score, explained variance, and visualizations update after each run
 
----
 
 ## Example of App
 **Sample output from the "Iris' dataset, displaying the derived K-Means clustering data from its output:**
@@ -49,7 +44,6 @@ Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionali
 <img width="1521" height="966" alt="image" src="https://github.com/user-attachments/assets/d9109c85-ff62-4599-95fb-136442bda055" />
 
 
----
 
 ## References
 
