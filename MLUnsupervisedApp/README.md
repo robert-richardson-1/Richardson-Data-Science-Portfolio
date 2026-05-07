@@ -2,7 +2,7 @@
 
 This project is an interactive unsupervised machine learning web application built with `Streamlit`. Users can explore two sample datasets (Iris and Breast Cancer), or upload their own .csv file, then run either K-Means Clustering or Principal Component Analysis with adjustable hyperparameters. The app displays a dataset preview, model performance metrics, and visualizations that update in real time.
 
-Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionality reduction, hyperparameter tuning via interactive widgets, and performance evaluation.
+Key machine-learning concepts applied: unsupervised learning, K-Means clustering, dimensionality reduction, hyperparameter tuning via interactive widgets, and performance evaluation.
 
 
 ## How to Run
