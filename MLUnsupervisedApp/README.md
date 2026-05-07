@@ -36,7 +36,7 @@ Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionali
 - **Dataset selection:** Choose from Iris (sample), Breast Cancer (sample), or upload your own .csv file
 - **Algorithm selection:** Switch between K-Means Clustering and PCA
 - **Hyperparameter tuning:**
-  - K-Means: adjust number of clusters (k), toggle elbow plot and silhouette plot
+  - K-Means: adjust number of clusters (k), toggle elbow plot, and silhouette plot
   - PCA: adjust number of components, toggle feature loadings heatmap
 - **Dataset preview:** Displays row count, feature count, and a live data table
 - **Performance metrics:** Inertia, silhouette score, explained variance, and visualizations update after each run
@@ -44,7 +44,8 @@ Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionali
 ---
 
 ## Example of App
-- Sample output from the "Iris' dataset, displaying the dervied K-Means clustering data from its output:
+**Sample output from the "Iris' dataset, displaying the derived K-Means clustering data from its output:**
+    - Here, a user is using the Iris sample data, and based on their selection of the K-Means clustering model using [3] clusters, they received the following: An Inertia (WCSS) of 139.8, Silhouette Score of 0.460, a depiction of how the k=3 clusters are actually grouping the data, and an elbow plot depicting the number of clusters selected and the "goodness of cluster number selection." Additionally, each of these features has a description accompanying them for each attribute.
 <img width="1521" height="966" alt="image" src="https://github.com/user-attachments/assets/d9109c85-ff62-4599-95fb-136442bda055" />
 
 
