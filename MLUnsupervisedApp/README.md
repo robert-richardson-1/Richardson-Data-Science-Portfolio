@@ -43,7 +43,9 @@ Key ML concepts applied: unsupervised learning, K-Means clustering, dimensionali
 
 ---
 
-## Example of App in Action
+## Example of App
+- Sample output from the "Iris' dataset, displaying the dervied K-Means clustering data from its output:
+  <img width="814" height="970" alt="image" src="https://github.com/user-attachments/assets/0f2a18dc-b1d3-41b3-8df4-d1871ec33f51" />
 
 
 ---
