@@ -2,10 +2,11 @@
 
 ## Introduction!
 - This semester at the University of Notre Dame, I am taking an intro to data science course. Through this course, I plan on gaining technical skills in the world of data science and analysis, as well as creating many projects to test and hone these skills. In this repository, I will hold my future projects, which will include: EDAs, visualizations, and models.
-- As of 4/19/27 I have created projects showcasing the following skills:
+- As of 5/6/27 I have created projects showcasing the following skills:
    - Palmer's Penguins Data Exploration: **`Streamlit`, `Pandas`, and `Python`**
    - Tidy Data Project: **data cleaning, tidy data principles, and `Jupyter notebook`**
    - Machine-Learning Streamlit App: **supervised classification models, hyperparameter tuning, confusion matrix and ROC curve visualizations, and train/test splitting**
+   - Unsupervised Machine-Learning Streamlit App: **unsupervised learning, dimensionality reduction, silhouette scoring, hyperparameter tuning, and interactive web app deployment**
 - This is only a handful of the visualizations that I have had input on this semester. Every Visualization from every project that I have completed can be found in the "view_visualizations" Jupyter Notebook file located in the "Projects" folder.
 
 ## Completed projects
@@ -44,14 +45,10 @@
 
 - [Click to open project via Streamlit Community Cloud](https://richardson-data-science-portfolio-mlunsupervisedapp.streamlit.app/)
 
-- 
+- Project involving the creation of an interactive unsupervised machine learning web app built with Streamlit. Users can select from sample datasets (Iris and Breast Cancer) or upload their own .csv file, then run K-Means Clustering or Principal Component Analysis (PCA) with adjustable hyperparameters. The app provides real-time visualizations, including elbow plots, silhouette analysis, PCA projections, scree plots, and a feature loadings heatmap.
 
+- Skills showcased: **unsupervised learning (K-Means and PCA), dimensionality reduction, silhouette scoring, hyperparameter tuning, and interactive web app deployment (`Streamlit`).**
 
-
-
-
-
-
-
+- This project builds directly on the supervised ML app by extending my understanding of machine learning into unsupervised methods, where there are no labels to guide the model. It demonstrates the ability to evaluate model quality without ground truth and communicate results through thoughtful visualizations, a key skill in exploratory data analysis and real-world ML workflows.
 <img width="1521" height="966" alt="image" src="https://github.com/user-attachments/assets/33129c2b-ca0f-4647-8e79-8a8fa66b7abd" />
 
