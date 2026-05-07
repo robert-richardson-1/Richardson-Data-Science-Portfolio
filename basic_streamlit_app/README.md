@@ -6,9 +6,9 @@ This project builds an interactive Streamlit application to explore the Palmer's
 
 ## How to Run
 
-1. Install Streamlit: pip install streamlit
+1. Install Streamlit: `pip install streamlit`
 2. Clone the repository and navigate to the project folder
-3. Run the app: streamlit run main.py
+3. Run the app: `streamlit run main.py`
 
 ## Dataset Overview
 
@@ -16,14 +16,14 @@ This project builds an interactive Streamlit application to explore the Palmer's
 
 The dataset contains observations of penguins across three species collected from islands in the Palmer Archipelago, Antarctica. Each row represents one penguin observation with the following variables:
 
-- species — penguin species (Adelie, Chinstrap, Gentoo)
-- island — island of observation
-- bill_length_mm — bill length in millimeters
-- bill_depth_mm — bill depth in millimeters
-- flipper_length_mm — flipper length in millimeters
-- body_mass_g — body mass in grams
-- sex — sex of the penguin
-- year — year of observation
+- `species` — penguin species (Adelie, Chinstrap, Gentoo)
+- `island` — island of observation
+- `bill_length_mm` — bill length in millimeters
+- `bill_depth_mm` — bill depth in millimeters
+- `flipper_length_mm` — flipper length in millimeters
+- `body_mass_g` — body mass in grams
+- `sex` — sex of the penguin
+- `year` — year of observation
 
 ## App Features
 
