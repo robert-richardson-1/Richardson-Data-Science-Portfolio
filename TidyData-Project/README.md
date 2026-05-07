@@ -4,7 +4,6 @@ This project applies tidy data principles to the dataset: "Mutant Moneyball" - X
 
 Tidy data rules: each variable in its own column, each observation its own row, each observational unit its own table.
 
----
 
 ## How to Run
 
@@ -12,7 +11,6 @@ Tidy data rules: each variable in its own column, each observation its own row, 
 
 - Place mutant_moneyball.csv in the same folder (.csv file available in the TidyData-Project folder in GitHub repository), then run all cells.
 
----
 
 ## Libraries Included
 
@@ -21,14 +19,12 @@ Tidy data rules: each variable in its own column, each observation its own row, 
 - `matplotlib.ticker`
 - `pandas`
 - `numpy`
-
----
+- 
 
 ## Dataset Overview
 
 Source: [Mutant Moneyball on GitHub](https://github.com/EliCash82/mutantmoneyball). One row per X-Men member, columns named TotalValue{Decade}s_{Market}. Through cleaning: melted data from wide to long form, split column names into Decade and Market, cleaned "$" and "," from monetary strings, and dropped rows with no recorded sale.
 
----
 
 ## Visualizations
 
@@ -38,7 +34,6 @@ Source: [Mutant Moneyball on GitHub](https://github.com/EliCash82/mutantmoneybal
 - Chart 2: Total card value by decade and market (grouped bar chart)
 <img width="1321" height="681" alt="Screenshot 2026-03-20 223224" src="https://github.com/user-attachments/assets/097d7a5a-d655-4354-b153-1f890dae448c" />
 
----
 
 ## References
 
