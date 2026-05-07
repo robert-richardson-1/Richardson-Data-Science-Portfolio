@@ -13,10 +13,10 @@
 
 | Project | Description |
 |---|---|
-| [Palmer's Penguins Data Exploration](https://github.com/RichardsonND/Richardson-Data-Science-Portfolio) | Interactive Streamlit app for filtering and exploring the Palmer's Penguins dataset by species, island, and physical traits |
-| [Tidy Data Project](https://github.com/RichardsonND/Richardson-Data-Science-Portfolio) | Data cleaning and reshaping of the Mutant Moneyball dataset using tidy data principles in Python and Pandas |
-| [Machine-Learning Streamlit App](https://github.com/RichardsonND/Richardson-Data-Science-Portfolio) | Supervised ML app with Decision Tree and Logistic Regression classifiers, hyperparameter tuning, and ROC/confusion matrix visualizations |
-| [Unsupervised Machine-Learning Streamlit App](https://github.com/RichardsonND/Richardson-Data-Science-Portfolio) | Unsupervised ML app with K-Means clustering and PCA, featuring elbow plots, silhouette analysis, and dimensionality reduction visualizations |
+| [Palmer's Penguins Data Exploration](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/tree/main/basic_streamlit_app) | Interactive Streamlit app for filtering and exploring the Palmer's Penguins dataset by species, island, and physical traits |
+| [Tidy Data Project](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/blob/main/TidyData-Project/README.md) | Data cleaning and reshaping of the Mutant Moneyball dataset using tidy data principles in Python and Pandas |
+| [Machine-Learning Streamlit App](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/blob/main/MLStreamlitApp/README.md) | Supervised ML app with Decision Tree and Logistic Regression classifiers, hyperparameter tuning, and ROC/confusion matrix visualizations |
+| [Unsupervised Machine-Learning Streamlit App](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/blob/main/MLUnsupervisedApp/README.md) | Unsupervised ML app with K-Means clustering and PCA, featuring elbow plots, silhouette analysis, and dimensionality reduction visualizations |
 
 ## Completed projects
 1.) [Palmer's Penguins Data Exploration](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/tree/main/basic_streamlit_app) 🐧
