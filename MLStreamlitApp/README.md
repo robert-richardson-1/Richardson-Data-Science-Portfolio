@@ -6,26 +6,26 @@ Key ML concepts applied: supervised classification, train/test splitting, hyperp
 
 ## How to Run
 
-- **Install dependencies:** 'pip install streamlit, scikit-learn, pandas, numpy, matplotlib, seaborn'
-- **Run locally:** process in terminal: "streamlit run main.py"
+- **Install dependencies:** `pip install streamlit, scikit-learn, pandas, numpy, matplotlib, seaborn`
+- **Run locally:** process in terminal: `streamlit run main.py`
 - **Deployed App:** [View on Streamlit Community Cloud](https://richardson-data-science-portfolio-mlapp.streamlit.app/)
 
 ## Libraries Included
 
-- streamlit
-- scikit-learn
-- pandas
-- numpy
-- matplotlib
-- seaborn
+- `streamlit`
+- `scikit-learn`
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
 
 ## Dataset Overview
 
-**Source:** Iris and Breast Cancer datasets are built into scikit-learn (sklearn.datasets). Iris classifies flower species by petal and sepal measurements across 3 classes (150 rows, 4 features). Breast Cancer classifies tumors as malignant or benign (569 rows, 30 features). Users may also uplaod their own labeled .csv file for classification tasks.
+**Source:** Iris and Breast Cancer datasets are built into scikit-learn (sklearn.datasets). Iris classifies flower species by petal and sepal measurements across 3 classes (150 rows, 4 features). Breast Cancer classifies tumors as malignant or benign (569 rows, 30 features). Users may also upload their own labeled .csv file for classification tasks.
 
 ## App Features
 
-- **Dataset selection:** Choose from Iris (sample), Breast Cancer (sample), or upload your own CSV file
+- **Dataset selection:** Choose from Iris (sample), Breast Cancer (sample), or upload your own .csv file
 - **Model selection:** Switch between Decision Tree and Logistic Regression classifiers
 - **Hyperparameter tuning:**
   - Decision Tree: adjust test set size and max depth via sidebar sliders
@@ -35,7 +35,7 @@ Key ML concepts applied: supervised classification, train/test splitting, hyperp
 
 ## Example of App in Action
 **Confusion matrix and ROC curve based on sample Breast Cancer data:**
- - Here, a user decided to use a decision tree model, and set their hyper parameters to a "test size" of 0.2 and a "max depth" of 4. Using these parameters, the model returned it's performance metrics for the data. It outputted the model's accuracy, precision, recall, and F1 score, as well as gave a confusion matrix and ROC curve from the given inputs/sample .csv file used.
+ - Here, a user decided to use a decision tree model and set their hyper parameters to a "test size" of 0.2 and a "max depth" of 4. Using these parameters, the model returned it's performance metrics for the data. It outputted the model's accuracy, precision, recall, and F1 score, as well as gave a confusion matrix and ROC curve from the given inputs/sample .csv file used.
 
 
 <img width="1611" height="814" alt="Screenshot 2026-04-14 152549" src="https://github.com/user-attachments/assets/f4dd3ba8-7eb0-49e9-8170-2549e72521d7" />
