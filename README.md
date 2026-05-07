@@ -9,6 +9,15 @@
    - Unsupervised Machine-Learning Streamlit App: **unsupervised learning, dimensionality reduction, silhouette scoring, hyperparameter tuning, and interactive web app deployment**
 - This is only a handful of the visualizations that I have had input on this semester. Every Visualization from every project that I have completed can be found in the "view_visualizations" Jupyter Notebook file located in the "Projects" folder.
 
+## At a Glance
+
+| Project | Description |
+|---|---|
+| [Palmer's Penguins Data Exploration](https://github.com/RichardsonND/Richardson-Data-Science-Portfolio) | Interactive Streamlit app for filtering and exploring the Palmer's Penguins dataset by species, island, and physical traits |
+| [Tidy Data Project](https://github.com/RichardsonND/Richardson-Data-Science-Portfolio) | Data cleaning and reshaping of the Mutant Moneyball dataset using tidy data principles in Python and Pandas |
+| [Machine-Learning Streamlit App](https://github.com/RichardsonND/Richardson-Data-Science-Portfolio) | Supervised ML app with Decision Tree and Logistic Regression classifiers, hyperparameter tuning, and ROC/confusion matrix visualizations |
+| [Unsupervised Machine-Learning Streamlit App](https://github.com/RichardsonND/Richardson-Data-Science-Portfolio) | Unsupervised ML app with K-Means clustering and PCA, featuring elbow plots, silhouette analysis, and dimensionality reduction visualizations |
+
 ## Completed projects
 1.) [Palmer's Penguins Data Exploration](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/tree/main/basic_streamlit_app) 🐧
 - Project involving the creation of a basic `Streamlit` app. By using the interactive features, one can filter the penguin data by species, island, bill length, bill depth, flipper length, body mass, sex, and year to see how different penguins compare!
@@ -51,4 +60,5 @@
 
 - This project builds directly on the supervised ML app by extending my understanding of machine learning into unsupervised methods, where there are no labels to guide the model. It demonstrates the ability to evaluate model quality without ground truth and communicate results through thoughtful visualizations, a key skill in exploratory data analysis and real-world ML workflows.
 <img width="1521" height="966" alt="image" src="https://github.com/user-attachments/assets/33129c2b-ca0f-4647-8e79-8a8fa66b7abd" />
+
 
