@@ -38,3 +38,20 @@
 
 - This project complements my portfolio by demonstrating the ability to move from raw ML concepts to a fully deployed, user-facing application. This bridges the gap between model training and interactive presentation, which is a core skill in practical data science and ML engineering.
 <img width="1611" height="814" alt="Screenshot 2026-04-14 152549" src="https://github.com/user-attachments/assets/0d21321c-fd6d-4470-9348-ced79bd57944" />
+
+
+4.) [Unsupervised Machine-Learning Streamlit App](https://github.com/robert-richardson-1/Richardson-Data-Science-Portfolio/tree/main/MLUnsupervisedApp) 🔍
+
+- [Click to open project via Streamlit Community Cloud](https://richardson-data-science-portfolio-mlunsupervisedapp.streamlit.app/)
+
+- 
+
+
+
+
+
+
+
+
+<img width="1521" height="966" alt="image" src="https://github.com/user-attachments/assets/33129c2b-ca0f-4647-8e79-8a8fa66b7abd" />
+
