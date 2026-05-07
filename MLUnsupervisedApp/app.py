@@ -3,11 +3,11 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.datasets import load_iris, load_wine, load_breast_cancer
+from sklearn.datasets import load_iris, load_breast_cancer
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
-from sklearn.metrics import silhouette_score
+from sklearn.metrics import silhouette_score, silhouette_samples
 
 st.set_page_config(page_title="Unsupervised Machine Learning Playground!")
 st.title("Unsupervised Machine Learning App!")
@@ -21,16 +21,12 @@ with st.sidebar:
     st.header("Exploration Settings")
 
     st.subheader("1. Dataset")
-    source = st.radio("", ["Iris (sample)", "Wine (sample)", "Breast Cancer (sample)", "Upload own .csv file"])
+    source = st.radio("", ["Iris (sample)", "Breast Cancer (sample)", "Upload own .csv file"])
 
     if source == "Iris (sample)":
         raw = load_iris(as_frame=True)
         df = raw.frame.drop(columns=["target"])
         dataset_name = "Iris"
-    elif source == "Wine (sample)":
-        raw = load_wine(as_frame=True)
-        df = raw.frame.drop(columns=["target"])
-        dataset_name = "Wine"
     elif source == "Breast Cancer (sample)":
         raw = load_breast_cancer(as_frame=True)
         df = raw.frame.drop(columns=["target"])
