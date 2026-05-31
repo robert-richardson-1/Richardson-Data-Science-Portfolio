@@ -735,28 +735,47 @@
 <footer>SplitCalc · built for Notre Dame Rowing</footer>
 
 <script>
+// ── Supabase config ────────────────────────────────────────────────────────
+const SUPA_URL = 'https://eiicvyxahacccpqgznwc.supabase.co';
+const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVpaWN2eXhhaGFjY2NwcWd6bndjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAxOTE1NjMsImV4cCI6MjA5NTc2NzU2M30.VE_QGeGFUfk7K_q6zW2ZRqY-dh17s5AQnZndHJf_bzk';
+const HEADERS = { 'Content-Type': 'application/json', 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY };
+
+async function dbGet(table, params) {
+  const q = new URLSearchParams(params).toString();
+  const r = await fetch(SUPA_URL + '/rest/v1/' + table + '?' + q, { headers: HEADERS });
+  if (!r.ok) throw new Error(await r.text());
+  return r.json();
+}
+
+async function dbPost(table, body) {
+  const r = await fetch(SUPA_URL + '/rest/v1/' + table, {
+    method: 'POST', headers: { ...HEADERS, 'Prefer': 'return=representation' },
+    body: JSON.stringify(body)
+  });
+  if (!r.ok) throw new Error(await r.text());
+  return r.json();
+}
+
+async function dbDelete(table, params) {
+  const q = new URLSearchParams(params).toString();
+  const r = await fetch(SUPA_URL + '/rest/v1/' + table + '?' + q, { method: 'DELETE', headers: HEADERS });
+  if (!r.ok) throw new Error(await r.text());
+}
+
+async function dbUpsert(table, body) {
+  const r = await fetch(SUPA_URL + '/rest/v1/' + table, {
+    method: 'POST', headers: { ...HEADERS, 'Prefer': 'resolution=merge-duplicates,return=representation' },
+    body: JSON.stringify(body)
+  });
+  if (!r.ok) throw new Error(await r.text());
+  return r.json();
+}
+
 // ── State ──────────────────────────────────────────────────────────────────
 let selectedBoat = '8+';
 let selectedDir = 'downstream';
-
-function storageKey(key) { return 'splitcalc_' + key; }
-
-function saveToStorage(key, value) {
-  try { localStorage.setItem(storageKey(key), JSON.stringify(value)); } catch(e) {}
-}
-
-function loadFromStorage(key, fallback) {
-  try {
-    const v = localStorage.getItem(storageKey(key));
-    return v !== null ? JSON.parse(v) : fallback;
-  } catch(e) { return fallback; }
-}
-
-// History: { '8+': [...], '4+': [...], '4-': [...] }
-let history = loadFromStorage('history', { '8+': [], '4+': [], '4-': [] });
-
-// Calibration per boat
-let calibration = loadFromStorage('calibration', { '8+': null, '4+': null, '4-': null });
+let history = { '8+': [], '4+': [], '4-': [] };
+let calibration = { '8+': null, '4+': null, '4-': null };
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 function toSecs(min, sec) { return parseInt(min) * 60 + parseInt(sec); }
@@ -773,6 +792,22 @@ function parseMinSec(minEl, secEl) {
   const s = parseInt(secEl.value);
   if (isNaN(m) || isNaN(s)) return null;
   return m * 60 + s;
+}
+
+function showToast(msg, type) {
+  let t = document.getElementById('toast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'toast';
+    t.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);padding:10px 18px;border-radius:8px;font-size:13px;font-weight:500;z-index:9999;transition:opacity 0.3s;';
+    document.body.appendChild(t);
+  }
+  t.textContent = msg;
+  t.style.background = type === 'error' ? '#8b1a1a' : '#0c2340';
+  t.style.color = '#e8b800';
+  t.style.opacity = '1';
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => { t.style.opacity = '0'; }, 2500);
 }
 
 // ── Boat selector ──────────────────────────────────────────────────────────
@@ -811,6 +846,16 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 });
 
 // ── History ────────────────────────────────────────────────────────────────
+async function fetchHistory() {
+  try {
+    const rows = await dbGet('history', { select: '*', order: 'date.desc' });
+    history = { '8+': [], '4+': [], '4-': [] };
+    rows.forEach(r => {
+      if (history[r.boat]) history[r.boat].push({ id: r.id, date: r.date, secs: r.secs, flow: r.flow, dir: r.dir });
+    });
+  } catch(e) { showToast('Could not load history', 'error'); }
+}
+
 function renderHistory() {
   const list = document.getElementById('historyList');
   const entries = history[selectedBoat] || [];
@@ -818,26 +863,30 @@ function renderHistory() {
     list.innerHTML = '<div class="no-history">No splits logged yet for ' + selectedBoat + '.</div>';
     return;
   }
-  list.innerHTML = entries.map((e, i) => `
+  list.innerHTML = entries.map((e) => `
     <div class="history-item">
       <span class="history-date">${e.date}</span>
       <span class="history-split">${secsToDisplay(e.secs)}</span>
-      <span class="history-flow">${e.flow.toLocaleString()} CFS</span>
+      <span class="history-flow">${Number(e.flow).toLocaleString()} CFS</span>
       <span class="badge ${e.dir === 'upstream' ? 'badge-up' : 'badge-down'}">${e.dir === 'upstream' ? '↑ up' : '↓ dn'}</span>
-      <button class="btn-danger-sm" data-i="${i}" title="Delete">×</button>
+      <button class="btn-danger-sm" data-id="${e.id}" title="Delete">×</button>
     </div>
   `).join('');
   list.querySelectorAll('.btn-danger-sm').forEach(btn => {
-    btn.addEventListener('click', () => {
-      history[selectedBoat].splice(parseInt(btn.dataset.i), 1);
-      saveToStorage('history', history);
-      renderHistory();
-      compute();
+    btn.addEventListener('click', async () => {
+      const id = btn.dataset.id;
+      try {
+        await dbDelete('history', { id: 'eq.' + id });
+        await fetchHistory();
+        renderHistory();
+        compute();
+        showToast('Split deleted');
+      } catch(e) { showToast('Delete failed', 'error'); }
     });
   });
 }
 
-document.getElementById('saveEntryBtn').addEventListener('click', () => {
+document.getElementById('saveEntryBtn').addEventListener('click', async () => {
   const date = document.getElementById('newDate').value;
   const min = document.getElementById('newMin').value;
   const sec = document.getElementById('newSec').value;
@@ -846,20 +895,24 @@ document.getElementById('saveEntryBtn').addEventListener('click', () => {
   if (!date || min === '' || sec === '' || !flow) { alert('Please fill in all fields.'); return; }
   const secs = toSecs(min, sec);
   if (isNaN(secs) || secs <= 0) { alert('Invalid split.'); return; }
-  if (!history[selectedBoat]) history[selectedBoat] = [];
-  history[selectedBoat].push({ date, secs, flow: parseFloat(flow), dir });
-  history[selectedBoat].sort((a, b) => new Date(b.date) - new Date(a.date));
-  saveToStorage('history', history);
-  document.getElementById('newMin').value = '';
-  document.getElementById('newSec').value = '';
-  document.getElementById('newFlow').value = '';
-  // switch back to log tab
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.querySelector('[data-tab="history"]').classList.add('active');
-  document.getElementById('tabHistory').classList.add('active');
-  renderHistory();
-  compute();
+
+  const btn = document.getElementById('saveEntryBtn');
+  btn.textContent = 'Saving…'; btn.disabled = true;
+  try {
+    await dbPost('history', { boat: selectedBoat, date, secs, flow: parseFloat(flow), dir });
+    await fetchHistory();
+    document.getElementById('newMin').value = '';
+    document.getElementById('newSec').value = '';
+    document.getElementById('newFlow').value = '';
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelector('[data-tab="history"]').classList.add('active');
+    document.getElementById('tabHistory').classList.add('active');
+    renderHistory();
+    compute();
+    showToast('Split saved');
+  } catch(e) { showToast('Save failed — check connection', 'error'); }
+  btn.textContent = 'Save split'; btn.disabled = false;
 });
 
 // ── Calibration ────────────────────────────────────────────────────────────
@@ -872,7 +925,7 @@ calInputIds.forEach(id => {
   document.getElementById(id).addEventListener('input', onCalibrationInput);
 });
 
-function onCalibrationInput() {
+async function onCalibrationInput() {
   const fA = parseFloat(document.getElementById('calA_flow').value);
   const fB = parseFloat(document.getElementById('calB_flow').value);
   const downA = parseMinSec(document.getElementById('calA_down_min'), document.getElementById('calA_down_sec'));
@@ -884,51 +937,39 @@ function onCalibrationInput() {
   const statusEl = document.getElementById('calStatus');
 
   if (filled.length === 6) {
-    // Solve: split = v0 + k * dir * flow
-    // where dir: downstream = -1, upstream = +1
-    // downA: v0 - k*fA = downA
-    // upA:   v0 + k*fA = upA
-    // downB: v0 - k*fB = downB
-    // upB:   v0 + k*fB = upB
-
-    // From A: v0 = (downA + upA)/2, k = (upA - downA)/(2*fA)
     const v0_A = (downA + upA) / 2;
     const k_A = (upA - downA) / (2 * fA);
-
-    // From B: v0 = (downB + upB)/2, k = (upB - downB)/(2*fB)
     const v0_B = (downB + upB) / 2;
     const k_B = (upB - downB) / (2 * fB);
-
-    // Average both estimates (over-determined, so average)
     const v0 = (v0_A + v0_B) / 2;
     const k = (k_A + k_B) / 2;
-
-    // Residual: how consistent are the two sessions' flat-water estimates?
     const residual = Math.abs(v0_A - v0_B);
 
     calibration[selectedBoat] = { v0, k, residual };
-    saveToStorage('calibration', calibration);
 
-    // Save raw inputs too
-    const calData = {
-      calA_flow: document.getElementById('calA_flow').value,
-      calA_date: document.getElementById('calA_date').value,
-      calA_down_min: document.getElementById('calA_down_min').value,
-      calA_down_sec: document.getElementById('calA_down_sec').value,
-      calA_up_min: document.getElementById('calA_up_min').value,
-      calA_up_sec: document.getElementById('calA_up_sec').value,
-      calB_flow: document.getElementById('calB_flow').value,
-      calB_date: document.getElementById('calB_date').value,
-      calB_down_min: document.getElementById('calB_down_min').value,
-      calB_down_sec: document.getElementById('calB_down_sec').value,
-      calB_up_min: document.getElementById('calB_up_min').value,
-      calB_up_sec: document.getElementById('calB_up_sec').value,
-    };
-    saveToStorage('calInputs_' + selectedBoat, calData);
+    // Persist calibration inputs to Supabase
+    try {
+      await dbUpsert('calibration', {
+        boat: selectedBoat,
+        cal_a_flow: parseFloat(document.getElementById('calA_flow').value) || null,
+        cal_a_date: document.getElementById('calA_date').value || null,
+        cal_a_down_min: parseInt(document.getElementById('calA_down_min').value) || null,
+        cal_a_down_sec: parseInt(document.getElementById('calA_down_sec').value) || null,
+        cal_a_up_min: parseInt(document.getElementById('calA_up_min').value) || null,
+        cal_a_up_sec: parseInt(document.getElementById('calA_up_sec').value) || null,
+        cal_b_flow: parseFloat(document.getElementById('calB_flow').value) || null,
+        cal_b_date: document.getElementById('calB_date').value || null,
+        cal_b_down_min: parseInt(document.getElementById('calB_down_min').value) || null,
+        cal_b_down_sec: parseInt(document.getElementById('calB_down_sec').value) || null,
+        cal_b_up_min: parseInt(document.getElementById('calB_up_min').value) || null,
+        cal_b_up_sec: parseInt(document.getElementById('calB_up_sec').value) || null,
+        updated_at: new Date().toISOString()
+      });
+      showToast('Calibration saved');
+    } catch(e) { showToast('Calibration save failed', 'error'); }
 
     statusEl.className = 'cal-status ready';
     statusEl.innerHTML = '<div class="cal-dot"></div><span>Calibrated — using exact 4-reading model</span>';
-
     document.getElementById('calResults').style.display = 'block';
     document.getElementById('calResFlat').textContent = secsToDisplay(v0) + ' / 500m';
     document.getElementById('calResSens').textContent = k.toFixed(4) + ' sec / CFS';
@@ -936,7 +977,6 @@ function onCalibrationInput() {
 
   } else if (filled.length > 0) {
     calibration[selectedBoat] = null;
-    saveToStorage('calibration', calibration);
     statusEl.className = 'cal-status partial';
     statusEl.innerHTML = '<div class="cal-dot"></div><span>' + filled.length + ' of 6 values entered</span>';
     document.getElementById('calResults').style.display = 'none';
@@ -949,20 +989,35 @@ function onCalibrationInput() {
   compute();
 }
 
-function loadCalibrationInputs() {
-  const calData = loadFromStorage('calInputs_' + selectedBoat, null);
+async function loadCalibrationInputs() {
   calInputIds.forEach(id => { document.getElementById(id).value = ''; });
-  if (calData) {
-    Object.entries(calData).forEach(([id, val]) => {
+  calibration[selectedBoat] = null;
+  document.getElementById('calStatus').className = 'cal-status none';
+  document.getElementById('calStatus').innerHTML = '<div class="cal-dot"></div><span>Loading…</span>';
+
+  try {
+    const rows = await dbGet('calibration', { select: '*', boat: 'eq.' + selectedBoat });
+    if (rows.length === 0) {
+      document.getElementById('calStatus').innerHTML = '<div class="cal-dot"></div><span>Enter 4 readings to calibrate</span>';
+      document.getElementById('calResults').style.display = 'none';
+      compute(); return;
+    }
+    const r = rows[0];
+    const map = {
+      calA_flow: r.cal_a_flow, calA_date: r.cal_a_date,
+      calA_down_min: r.cal_a_down_min, calA_down_sec: r.cal_a_down_sec,
+      calA_up_min: r.cal_a_up_min, calA_up_sec: r.cal_a_up_sec,
+      calB_flow: r.cal_b_flow, calB_date: r.cal_b_date,
+      calB_down_min: r.cal_b_down_min, calB_down_sec: r.cal_b_down_sec,
+      calB_up_min: r.cal_b_up_min, calB_up_sec: r.cal_b_up_sec,
+    };
+    Object.entries(map).forEach(([id, val]) => {
       const el = document.getElementById(id);
-      if (el) el.value = val;
+      if (el && val !== null) el.value = val;
     });
     onCalibrationInput();
-  } else {
-    document.getElementById('calStatus').className = 'cal-status none';
+  } catch(e) {
     document.getElementById('calStatus').innerHTML = '<div class="cal-dot"></div><span>Enter 4 readings to calibrate</span>';
-    document.getElementById('calResults').style.display = 'none';
-    calibration[selectedBoat] = null;
     compute();
   }
 }
@@ -982,7 +1037,6 @@ function compute() {
   let method = '';
   let warnMsg = '';
 
-  // Priority 1: calibrated 4-reading model
   const cal = calibration[selectedBoat];
   if (cal) {
     goalSecs = cal.v0 + dirSign * cal.k * flow;
@@ -992,17 +1046,13 @@ function compute() {
     }
   }
 
-  // Priority 2: history-based fallback
   if (!goalSecs) {
     const entries = history[selectedBoat] || [];
     if (entries.length === 0) {
       container.innerHTML = '<div class="empty-result"><div class="empty-result-big">—:——</div>Add calibration data or at least one split in the history log.</div>';
       return;
     }
-
-    // Heuristic: normalize using reference flow + direction
-    const REF = 2500;
-    const ADJ = 2.0;
+    const REF = 2500, ADJ = 2.0;
     const flatSplits = entries.map(e => {
       const d = e.dir === 'downstream' ? -1 : 1;
       return e.secs + d * ((e.flow - REF) / 1000) * ADJ;
@@ -1045,12 +1095,16 @@ function compute() {
 }
 
 // ── Init ───────────────────────────────────────────────────────────────────
-const today = new Date().toISOString().split('T')[0];
-document.getElementById('newDate').value = today;
+async function init() {
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('newDate').value = today;
+  await fetchHistory();
+  renderHistory();
+  await loadCalibrationInputs();
+  compute();
+}
 
-renderHistory();
-loadCalibrationInputs();
-compute();
+init();
 </script>
 </body>
 </html>
